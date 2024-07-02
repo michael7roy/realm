@@ -1,4 +1,4 @@
-[log]                                                                                                              [0/272]
+[log]
 level = "warn"
 output = "/var/log/realm.log"
 
