@@ -25,4 +25,4 @@ EXPOSE 18991
 EXPOSE 18992
 
 #haproxy -c -f /usr/local/etc/haproxy/haproxy.cfg
-ENTRYPOINT ["haproxy", "-c", "-f", "/usr/local/etc/haproxy/haproxy.cfg"]
+#ENTRYPOINT ["haproxy", "-c", "-f", "/usr/local/etc/haproxy/haproxy.cfg"]
