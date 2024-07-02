@@ -1,6 +1,6 @@
 FROM debian:bullseye-slim
 
-COPY target/x86_64-unknown-linux-musl/release/realm /usr/bin
+COPY realm /usr/bin
 COPY realm_config.toml /usr/bin/realm_config.toml
 RUN chmod +x /usr/bin/realm
 
