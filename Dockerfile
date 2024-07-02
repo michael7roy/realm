@@ -1,14 +1,21 @@
-FROM debian:bullseye-slim
+#FROM debian:bullseye-slim
+#
+#COPY realm /usr/bin
+#COPY realm_config.toml /usr/bin/realm_config.toml
+#RUN chmod +x /usr/bin/realm
+#
+#EXPOSE 8000
+#EXPOSE 21115
+#EXPOSE 21116
+#EXPOSE 21117
+#EXPOSE 21118
+#EXPOSE 21119
+#
+#ENTRYPOINT ["/usr/bin/realm", "-c", "/usr/bin/realm_config.toml"]
 
-COPY realm /usr/bin
-COPY realm_config.toml /usr/bin/realm_config.toml
-RUN chmod +x /usr/bin/realm
+FROM haproxytech/haproxy-ubuntu:3.0
 
-EXPOSE 8000
-EXPOSE 21115
-EXPOSE 21116
-EXPOSE 21117
-EXPOSE 21118
-EXPOSE 21119
+COPY haproxy.cfg /usr/local/etc/haproxy/haproxy.cfg
 
-ENTRYPOINT ["/usr/bin/realm", "-c", "/usr/bin/realm_config.toml"]
+#haproxy -c -f /usr/local/etc/haproxy/haproxy.cfg
+ENTRYPOINT ["haproxy", "-c", "-f", "/usr/local/etc/haproxy/haproxy.cfg"]
