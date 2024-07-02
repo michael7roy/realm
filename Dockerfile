@@ -21,8 +21,8 @@ COPY haproxy.cfg /usr/local/etc/haproxy/haproxy.cfg
 #EXPOSE 21115
 #EXPOSE 21116
 #EXPOSE 21117
-EXPOSE 18991
-EXPOSE 18992
+EXPOSE 80
+#EXPOSE 18992
 
 #haproxy -c -f /usr/local/etc/haproxy/haproxy.cfg
 #ENTRYPOINT ["haproxy", "-c", "-f", "/usr/local/etc/haproxy/haproxy.cfg"]
