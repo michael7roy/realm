@@ -1,0 +1,8 @@
+{
+  "services": [
+    {
+      "name": "my-service",
+      "port": 18991
+    }
+  ]
+}
