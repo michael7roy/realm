@@ -1,0 +1,31 @@
+[log]                                                                                                              [0/272]
+level = "warn"
+output = "/var/log/realm.log"
+
+[network]
+no_tcp = false
+use_udp = true
+
+[[endpoints]]
+listen = "0.0.0.0:8000"
+remote = "realm7michael.zeabur.app:8000"
+
+[[endpoints]]
+listen = "0.0.0.0:21115"
+remote = "realm7michael.zeabur.app:21115"
+
+[[endpoints]]
+listen = "0.0.0.0:21116"
+remote = "realm7michael.zeabur.app:21116"
+
+[[endpoints]]
+listen = "0.0.0.0:21117"
+remote = "realm7michael.zeabur.app:21117"
+
+[[endpoints]]
+listen = "0.0.0.0:21118"
+remote = "realm7michael.zeabur.app:21118"
+
+[[endpoints]]
+listen = "0.0.0.0:21119"
+remote = "realm7michael.zeabur.app:21119"
